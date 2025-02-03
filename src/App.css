@@ -36,3 +36,6 @@
     transform: rotate(360deg);
   }
 }
+.holiday-event {
+  background-color: #ffdada !important; /* ピンク色にする */
+}
