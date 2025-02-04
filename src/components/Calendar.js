@@ -28,15 +28,21 @@ const Calendar = ({ events, onOpenAddModal, onOpenListModal }) => {
       locales={[jaLocale]}
       locale="ja"
       dayMaxEventRows={5}
-      eventDidMount={(info) => {
-        // 通常のイベントの背景色を適用
-        const bgColor = info.event.extendedProps?.backgroundColor || "#007bff";
-        info.el.style.backgroundColor = bgColor;
-      }}
+      // eventDidMount={(info) => {
+      //   // 通常のイベントの背景色を適用
+      //   const bgColor = info.event.extendedProps?.backgroundColor || "#007bff";
+      //   info.el.style.backgroundColor = bgColor;
+      // }}
       dayCellDidMount={(info) => {
         const date = info.date;
         const day = date.getDay(); // 0: 日曜, 6: 土曜
-        const formattedDate = date.toISOString().split("T")[0]; // YYYY-MM-DD 形式
+        const formattedDate = info.date
+          .toLocaleDateString("ja-JP", {
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit",
+          })
+          .replace(/\//g, "-");
 
         // 祝日リストにその日が含まれていたら背景色を変更
         if (
@@ -46,14 +52,14 @@ const Calendar = ({ events, onOpenAddModal, onOpenListModal }) => {
               event.backgroundColor === "#FFDADA"
           )
         ) {
-          info.el.style.backgroundColor = "#FFDAFA"; // 祝日の背景色
+          info.el.style.backgroundColor = "#FFDADA"; // 祝日の背景色、あとで変更
         }
 
         // 土曜日は薄い青、日曜日は薄い赤
         if (day === 6) {
           info.el.style.backgroundColor = "#E0F7FA"; // 土曜の背景色（薄い水色）
         } else if (day === 0) {
-          info.el.style.backgroundColor = "#FFEBEE"; // 日曜の背景色（薄い赤）
+          info.el.style.backgroundColor = "#FFDADA"; // 日曜の背景色（薄い赤）
         }
       }}
     />
