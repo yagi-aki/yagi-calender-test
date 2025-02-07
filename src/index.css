@@ -11,3 +11,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.fc-toolbar-chunk {
+  display: flex !important; /* フレックスボックスで横並び */
+  align-items: center; /* 垂直方向の中央揃え */
+  gap: 10px; /* ボタンとタイトルの間隔 */
+}
+.fc-toolbar.fc-header-toolbar {
+  margin-top: 1.5rem;
+}
+.event-item {
+  background-color: #87cefa; /* 薄い青 */
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  list-style: none;
+  word-wrap: break-word; /* 長い単語を折り返す */
+  white-space: normal; /* 必要に応じて改行 */
+  overflow-wrap: break-word; /* 長い単語を折り返す */
+  max-width: 100%; /* 親要素の幅を超えないようにする */
+}
+.event-items {
+  padding: 0px 10px;
+}
+.fc-toolbar-chunk {
+  display: flex !important; /* フレックスボックスで横並び */
+  align-items: center; /* 垂直方向の中央揃え */
+  gap: 10px; /* ボタンとタイトルの間隔 */
+}
+.fc-toolbar.fc-header-toolbar {
+  margin-top: 1.5rem;
+}
+.event-list {
+  max-height: 300px; /* 予定一覧の最大高さ */
+  overflow-y: auto; /* スクロール可能にする */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}

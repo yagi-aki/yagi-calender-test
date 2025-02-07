@@ -39,3 +39,12 @@
 .holiday-event {
   background-color: #ffdada !important; /* ピンク色にする */
 }
+
+.fc-toolbar-chunk {
+  display: flex !important; /* フレックスボックスで横並び */
+  align-items: center; /* 垂直方向の中央揃え */
+  gap: 10px; /* ボタンとタイトルの間隔 */
+}
+.fc-toolbar.fc-header-toolbar {
+  margin-top: 1.5rem;
+}
