@@ -1,0 +1,11 @@
+.fc-toolbar.fc-header-toolbar {
+  display: flex !important; /* ヘッダー全体をflexboxに */
+  justify-content: space-between !important; /* 左右に配置 */
+  align-items: center !important; /* 中央揃え */
+}
+
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk {
+  display: flex !important; /* ツールバーチャンク（各エリア）もflex */
+  align-items: center !important;
+  gap: 10px !important; /* ボタンとタイトルの間隔を調整 */
+}

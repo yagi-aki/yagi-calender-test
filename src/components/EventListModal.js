@@ -7,17 +7,19 @@ const EventListModal = ({ isOpen, onClose, events }) => {
     <div className="modal">
       <div className="modal-content">
         <h2>予定一覧</h2>
-        {events.length > 0 ? (
-          <ul>
-            {events.map((event, index) => (
-              <li key={index}>
-                {event.start.replace("T", " ")}: {event.title}
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p>現在予定はありません</p>
-        )}
+        <div className="event-list">
+          {events.length > 0 ? (
+            <ul className="event-items">
+              {events.map((event, index) => (
+                <li key={index} className="event-item">
+                  {event.start.replace("T", " ")}: {event.title}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p>現在予定はありません</p>
+          )}
+        </div>
         <div className="modal-buttons">
           <button onClick={onClose}>閉じる</button>
         </div>

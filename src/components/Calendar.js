@@ -11,8 +11,7 @@ const Calendar = ({ events, onOpenAddModal, onOpenListModal }) => {
       plugins={[dayGridPlugin, interactionPlugin]}
       initialView="dayGridMonth"
       headerToolbar={{
-        left: "prev,next",
-        center: "title",
+        left: "prev title next",
         right: "customAddEvent customViewEvents",
       }}
       customButtons={{
