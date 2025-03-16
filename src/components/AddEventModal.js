@@ -13,7 +13,13 @@ const AddEventModal = ({
   return (
     <div className="modal">
       <div className="modal-content">
-        <h2>予定追加</h2>
+        <div className="modal-header">
+          <button onClick={onClose} className="back-button">
+            ←
+          </button>
+          <h2>予定追加</h2>
+        </div>
+
         <div className="form-group">
           <label>日付:</label>
           <input
@@ -43,9 +49,6 @@ const AddEventModal = ({
         <div className="modal-button">
           <button onClick={onAddEvent} className="add-btn">
             追加
-          </button>
-          <button onClick={onClose} className="cancel-btn">
-            キャンセル
           </button>
         </div>
       </div>

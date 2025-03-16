@@ -12,6 +12,7 @@
 }
 
 .modal-content {
+  position: relative;
   background: white;
   padding: 20px;
   border-radius: 10px;
@@ -27,6 +28,21 @@
 .modal-button button {
   margin: 5px;
 }
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #333;
+}
+
+.back-button:hover {
+  color: #000;
+}
+
 /* 入力フォームのスタイル */
 .form-group {
   display: flex;
@@ -48,4 +64,30 @@
 }
 .holiday-event {
   background-color: bisque;
+}
+.event-list {
+  list-style: none;
+  padding: 0;
+}
+
+.event-item {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* 上下に配置 */
+  align-items: center;
+}
+
+.event-date {
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 0.8; /* 少し薄め */
+}
+
+.event-title {
+  font-size: 16px;
+  margin-top: 5px;
 }
